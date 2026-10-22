@@ -20,14 +20,14 @@ async function EditTruck({ params }: { params: Promise<{ id: string }> }) {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold tracking-tight text-ink-950">
+      <h1 className="text-xl font-bold tracking-tight text-ink-950 sm:text-2xl">
         Edit truck
       </h1>
       <p className="mt-1 text-sm text-ink-500">
         {truck.title} &middot; last updated {truck.updatedAt.slice(0, 10)}
       </p>
 
-      <div className="mt-6 max-w-3xl">
+      <div className="mt-5 max-w-3xl sm:mt-6">
         <TruckForm truck={truck} />
       </div>
     </div>

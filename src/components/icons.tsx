@@ -96,6 +96,15 @@ export function CheckIcon(props: IconProps) {
   );
 }
 
+export function LogOutIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M9 4H5v16h4" />
+      <path d="M16 17l5-5-5-5M21 12H9" />
+    </Base>
+  );
+}
+
 export function ArrowLeftIcon(props: IconProps) {
   return (
     <Base {...props}>

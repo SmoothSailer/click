@@ -4,7 +4,12 @@ import Link from "next/link";
 import { useActionState, useState } from "react";
 
 import { saveTruckAction } from "@/app/(admin)/admin/actions";
-import { inputClass, labelClass, buttonSecondaryClass } from "@/lib/styles";
+import {
+  buttonPrimaryClass,
+  buttonSecondaryClass,
+  inputClass,
+  labelClass,
+} from "@/lib/styles";
 import { slugify } from "@/lib/slug";
 import type { Truck, TruckImage } from "@/lib/types";
 import { SpinnerIcon } from "@/components/icons";
@@ -50,10 +55,10 @@ export function TruckForm({ truck }: { truck?: Truck }) {
         </p>
       ) : null}
 
-      <section className="rounded-xl border border-ink-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-ink-950">Basics</h2>
+      <section className="rounded-xl border border-ink-200 bg-white p-4 sm:p-5">
+        <h2 className="text-base font-semibold text-ink-950 sm:text-lg">Basics</h2>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-4">
           <div className="sm:col-span-2">
             <label htmlFor="title" className={labelClass}>
               Listing title *
@@ -199,10 +204,10 @@ export function TruckForm({ truck }: { truck?: Truck }) {
         </div>
       </section>
 
-      <section className="rounded-xl border border-ink-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-ink-950">Configuration</h2>
+      <section className="rounded-xl border border-ink-200 bg-white p-4 sm:p-5">
+        <h2 className="text-base font-semibold text-ink-950 sm:text-lg">Configuration</h2>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-4">
           <div>
             <label htmlFor="fuelType" className={labelClass}>
               Fuel type
@@ -304,17 +309,17 @@ export function TruckForm({ truck }: { truck?: Truck }) {
         </div>
       </section>
 
-      <section className="rounded-xl border border-ink-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-ink-950">Photos</h2>
+      <section className="rounded-xl border border-ink-200 bg-white p-4 sm:p-5">
+        <h2 className="text-base font-semibold text-ink-950 sm:text-lg">Photos</h2>
         <div className="mt-4">
           <ImageUploader images={images} onChange={setImages} />
         </div>
       </section>
 
-      <section className="rounded-xl border border-ink-200 bg-white p-5">
-        <h2 className="text-lg font-semibold text-ink-950">Visibility</h2>
+      <section className="rounded-xl border border-ink-200 bg-white p-4 sm:p-5">
+        <h2 className="text-base font-semibold text-ink-950 sm:text-lg">Visibility</h2>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-4">
           <div>
             <label htmlFor="status" className={labelClass}>
               Status
@@ -345,11 +350,11 @@ export function TruckForm({ truck }: { truck?: Truck }) {
         </div>
       </section>
 
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
         <FormActions pending={pending} cancelHref="/admin" />
         <Link
           href="/"
-          className="text-sm font-medium text-ink-500 underline-offset-4 hover:text-ink-900 hover:underline"
+          className="text-center text-sm font-medium text-ink-500 underline-offset-4 hover:text-ink-900 hover:underline sm:text-left"
         >
           View storefront
         </Link>
@@ -370,12 +375,12 @@ function FormActions({
       <button
         type="submit"
         disabled={pending}
-        className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-ink-800 disabled:cursor-not-allowed disabled:opacity-60"
+        className={`${buttonPrimaryClass} w-full sm:w-auto`}
       >
         {pending ? <SpinnerIcon className="size-4" /> : null}
         {pending ? "Saving…" : "Save truck"}
       </button>
-      <a href={cancelHref} className={buttonSecondaryClass}>
+      <a href={cancelHref} className={`${buttonSecondaryClass} w-full sm:w-auto`}>
         Cancel
       </a>
     </>

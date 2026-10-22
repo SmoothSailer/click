@@ -26,7 +26,7 @@ export function TruckRowActions({
         onClick={() =>
           startTransition(() => setTruckStatusAction(id, nextStatus))
         }
-        className="rounded-lg border border-ink-300 bg-white px-2.5 py-1.5 text-xs font-semibold text-ink-700 transition hover:bg-ink-50 disabled:opacity-60"
+        className="inline-flex min-h-10 items-center rounded-lg border border-ink-300 bg-white px-3 py-1.5 text-xs font-semibold text-ink-700 transition hover:bg-ink-50 disabled:opacity-60"
       >
         {nextStatus === "sold" ? "Mark sold" : "Mark available"}
       </button>
@@ -42,7 +42,7 @@ export function TruckRowActions({
             startTransition(() => deleteTruckAction(id));
           }
         }}
-        className="rounded-lg border border-red-200 bg-white px-2.5 py-1.5 text-xs font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-60"
+        className="inline-flex min-h-10 items-center rounded-lg border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-60"
       >
         Delete
       </button>
