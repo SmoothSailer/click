@@ -1,0 +1,83 @@
+-- Sample inventory so the storefront is not empty on a fresh install.
+-- Images are left empty on purpose: upload real photos from /admin.
+
+insert into public.trucks
+  (slug, title, make, model, year, price, currency, mileage_km, fuel_type, transmission,
+   ownership, body_type, capacity_tons, location, description, status, featured)
+values
+  (
+    'tata-407-gold-sfc-2019',
+    'Tata 407 Gold SFC 2.0T - 2019',
+    'Tata',
+    '407 Gold SFC',
+    2019,
+    2450000,
+    'KSH',
+    142000,
+    'Diesel',
+    'Manual',
+    'First',
+    'SFC Light Truck',
+    2.00,
+    'Nairobi, Kenya',
+    'Well maintained Tata 407 Gold SFC with a clean load body. All service records available, inspection renewed, insurance valid. Ideal for city distribution and FMCG loads.',
+    'available',
+    true
+  ),
+  (
+    'ashok-leyland-allysa-2020',
+    'Ashok Leyland AlYSA 2116 HD - 2020',
+    'Ashok Leyland',
+    'AlYSA 2116 HD',
+    2020,
+    4200000,
+    'KSH',
+    98000,
+    'Diesel',
+    'Manual',
+    'First',
+    'Tipper',
+    6.00,
+    'Nakuru, Kenya',
+    'Heavy duty tipper with reinforced body and hydraulic tipping arrangement. Tyres replaced recently, payload 6 tonnes, suited for construction material movement.',
+    'available',
+    true
+  ),
+  (
+    'eicher-pro-2049-tipper-2018',
+    'Eicher Pro 2049 Tipper - 2018',
+    'Eicher',
+    'Pro 2049',
+    2018,
+    3600000,
+    'KSH',
+    176500,
+    'Diesel',
+    'Manual',
+    'Second',
+    'Tipper',
+    4.50,
+    'Mombasa, Kenya',
+    'Reliable workhorse with a 4.5 tonne payload. Engine and gearbox in good working order, body recently repainted. Ready for immediate dispatch.',
+    'available',
+    false
+  ),
+  (
+    'mahindra-bolero-pickup-2022',
+    'Mahindra Bolero Pickup Extra Long - 2022',
+    'Mahindra',
+    'Bolero Pickup Extra Long',
+    2022,
+    1850000,
+    'KSH',
+    61000,
+    'Diesel',
+    'Manual',
+    'First',
+    'Pickup',
+    0.75,
+    'Kisumu, Kenya',
+    'Extra long pickup body for bulky cargo. Single owner, lightly used commercial operations until last month. Low running costs.',
+    'sold',
+    false
+  );
