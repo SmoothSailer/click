@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Deep forest green — the brand's dark "black" for headers, heroes and text. */
-  --color-ink-50: #f2f9f4;
-  --color-ink-100: #e0f1e6;
-  --color-ink-200: #c1e4ce;
-  --color-ink-300: #92cda9;
-  --color-ink-400: #60b083;
-  --color-ink-500: #3c8e63;
-  --color-ink-600: #2c734f;
-  --color-ink-700: #255c41;
-  --color-ink-800: #1f4a36;
-  --color-ink-900: #123a28;
-  --color-ink-950: #082219;
+  /* Forest green — the brand's dark colour for heroes, headers and text. */
+  --color-ink-50: #eaf6ee;
+  --color-ink-100: #d9efe1;
+  --color-ink-200: #bbe2c9;
+  --color-ink-300: #8fcda6;
+  --color-ink-400: #5eb183;
+  --color-ink-500: #337a53;
+  --color-ink-600: #2a6a48;
+  --color-ink-700: #1f5c3d;
+  --color-ink-800: #1a5236;
+  --color-ink-900: #123f2a;
+  --color-ink-950: #14532d;
 
   /* Bright grass green — calls to action, badges and highlights. */
   --color-accent-50: #f0fdf4;
